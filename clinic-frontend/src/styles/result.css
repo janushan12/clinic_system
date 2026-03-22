@@ -1,0 +1,465 @@
+/* ── Visit Result Page ───────────────────────────────────────── */
+.result-page {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+/* ── Summary banner ──────────────────────────────────────────── */
+.summary-banner {
+  background: linear-gradient(135deg, #1a6fdb 0%, #0ea5e9 100%);
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 6px 20px rgba(26, 111, 219, 0.3);
+}
+
+.summary-banner-eyebrow {
+  font-size: 11px;
+  opacity: 0.75;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.summary-banner-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.summary-banner-id {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.visit-id-code {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.banner-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-action {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  backdrop-filter: blur(4px);
+  transition: opacity 0.15s;
+  cursor: pointer;
+}
+
+.btn-action:hover { opacity: 0.85; }
+
+.btn-action.light {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-action.solid {
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--accent);
+  border: none;
+}
+
+/* ── Mini stats ──────────────────────────────────────────────── */
+.mini-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.mini-stat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  box-shadow: var(--shadow-xs);
+  border-top: 3px solid var(--mini-color, var(--accent));
+}
+
+.mini-stat-icon { font-size: 18px; margin-bottom: 6px; }
+
+.mini-stat-value {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.mini-stat-label {
+  font-size: 11px;
+  color: var(--text3);
+  margin-top: 2px;
+}
+
+/* ── 3-col parsed results ────────────────────────────────────── */
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.result-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.result-section-header {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--section-border, var(--border));
+  background: var(--section-bg, var(--surface2));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result-section-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--section-color, var(--text));
+}
+
+.result-section-count {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--section-color, var(--accent));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.result-section-body {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 360px;
+  overflow-y: auto;
+}
+
+/* ── Drug card ───────────────────────────────────────────────── */
+.drug-card {
+  background: var(--drug-lt);
+  border: 1px solid var(--drug-border);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.drug-card-name {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--drug);
+  margin-bottom: 6px;
+}
+
+.drug-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.drug-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  background: rgba(109, 40, 217, 0.1);
+  color: var(--drug);
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.drug-instructions {
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--text2);
+  font-style: italic;
+}
+
+.drug-price {
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--drug);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ── Lab card ────────────────────────────────────────────────── */
+.lab-card {
+  background: var(--lab-lt);
+  border: 1px solid var(--lab-border);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.lab-card-name {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--lab);
+  margin-bottom: 4px;
+}
+
+.lab-card-notes {
+  font-size: 12px;
+  color: var(--text2);
+}
+
+.lab-card-price {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--lab);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ── Note card ───────────────────────────────────────────────── */
+.note-card {
+  background: var(--note-lt);
+  border: 1px solid var(--note-border);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.note-category-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 2px 8px;
+  border-radius: 20px;
+  margin-bottom: 6px;
+}
+
+.note-text {
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ── Empty state ─────────────────────────────────────────────── */
+.empty-state {
+  text-align: center;
+  padding: 20px 0;
+  color: var(--text3);
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.empty-state-dash {
+  font-size: 24px;
+  opacity: 0.4;
+}
+
+/* ── Bill section ────────────────────────────────────────────── */
+.bill-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.bill-header {
+  padding: 16px 24px;
+  background: var(--surface2);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bill-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bill-header-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #fef3c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.bill-header-title {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.bill-header-sub {
+  font-size: 12px;
+  color: var(--text3);
+}
+
+/* ── Bill table ──────────────────────────────────────────────── */
+.bill-table-wrap {
+  padding: 0 24px;
+}
+
+.bill-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bill-table th {
+  padding: 10px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid var(--border);
+}
+
+.bill-table td {
+  padding: 10px 8px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--border);
+}
+
+.bill-table td.mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.bill-table td.bold { font-weight: 600; }
+.bill-table td.muted { color: var(--text2); }
+
+.category-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.category-badge.consultation { background: var(--accent-lt);  color: var(--accent); }
+.category-badge.drug         { background: var(--drug-lt);    color: var(--drug);   }
+.category-badge.lab          { background: var(--lab-lt);     color: var(--lab);    }
+
+/* ── Bill totals ─────────────────────────────────────────────── */
+.bill-footer {
+  padding: 16px 24px;
+  border-top: 1px solid var(--border);
+  background: var(--surface2);
+}
+
+.totals-wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.totals-block {
+  min-width: 280px;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  font-size: 13px;
+}
+
+.total-row-label { color: var(--text2); }
+
+.total-row-value {
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.grand-total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid var(--border);
+  margin-top: 8px;
+  padding-top: 10px;
+}
+
+.grand-total-label {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.grand-total-value {
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--accent);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.bill-actions {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-pay {
+  background: var(--success);
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(10, 138, 92, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+.btn-pay:hover:not(:disabled) { background: #076b48; }
+.btn-pay:disabled { opacity: 0.7; cursor: default; }
+
+.paid-badge {
+  background: var(--success-lt);
+  color: var(--success);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ── Status badge ────────────────────────────────────────────── */
+.status-badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status-badge.pending  { background: var(--warning-lt); color: var(--warning); border: 1px solid rgba(196,125,14,.3); }
+.status-badge.paid     { background: var(--success-lt); color: var(--success); border: 1px solid rgba(10,138,92,.3); }
+.status-badge.cancelled{ background: var(--danger-lt);  color: var(--danger);  border: 1px solid rgba(201,53,53,.3); }
